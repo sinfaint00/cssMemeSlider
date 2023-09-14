@@ -1,0 +1,78 @@
+/* Reset CSS */
+/* Добавьте сюда стили reset.css или normalize.css, если необходимо */
+
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: relative; /* Добавляем позиционирование */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    padding: 10px;
+}
+
+.indicators-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicators {
+    display: flex;
+    align-items: center; /* Выравниваем индикаторы по вертикали */
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.indicator:hover {
+    opacity: 1;
+}
+
+
+/* Мобильная версия */
+@media (max-width: 320px) {
+    .slide {
+        padding: 10px;
+    }
+}
+
+/* Десктопная версия */
+@media (min-width: 1920px) {
+    .slide {
+        padding: 20px;
+    }
+}
