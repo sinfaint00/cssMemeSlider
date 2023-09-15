@@ -1,0 +1,87 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.carousel-container {
+    overflow: hidden;
+    background-color: black;
+    height: 50vw;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 40%;
+    height: 60%;
+    width: 40vw;
+}
+
+.caption {
+    display: flex;
+    padding: 1vw;
+    font-size: 1.5vw;
+    margin-left: 28.9%;
+}
+
+.indicators-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 29.3vw;
+    margin-top: -19.5vw;
+}
+
+.indicators {
+    display: flex;
+    align-items: flex-end;
+}
+
+.indicator {
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color: rgb(152, 152, 255);
+    border: 1px solid rgb(152, 152, 255);
+    border-radius: 50%;
+    margin: 0.5vw;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Добавляем анимацию смены цвета фона */
+}
+
+.indicator:hover {
+    background-color: white;
+    border-color: white; 
+}
+
+/* Мобильная версия */
+@media (max-width: 320px) {
+    .indicators-container {
+        
+    }
+
+    .indicators {
+       padding-right:14.5vw;
+    }
+
+    .caption {
+    font-size: 1.5vw;
+    margin-left: 28.9%;
+    padding-top: 5vw;
+    }
+}
