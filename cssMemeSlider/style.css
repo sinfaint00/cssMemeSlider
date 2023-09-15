@@ -8,6 +8,7 @@ body {
 .carousel-container {
     overflow: hidden;
     background-color: black;
+    height: 50vw;
 }
 
 .carousel {
@@ -29,19 +30,20 @@ body {
 img {
     max-width: 40%;
     height: 60%;
-    width: 100%;
+    width: 40vw;
 }
 
 .caption {
+    display: flex;
     padding: 1vw;
     font-size: 1.5vw;
-    margin-left: -35vw;
+    margin-left: 28.9%;
 }
 
 .indicators-container {
     display: flex;
     justify-content: flex-end;
-    padding-right: 29vw;
+    padding-right: 29.3vw;
     margin-top: -19.5vw;
 }
 
@@ -70,14 +72,16 @@ img {
 /* Мобильная версия */
 @media (max-width: 320px) {
     .indicators-container {
-        justify-content: center;
+        
     }
 
     .indicators {
-        align-items: center;
+       padding-right:14.5vw;
     }
 
     .caption {
-        text-align: center;
+    font-size: 1.5vw;
+    margin-left: 28.9%;
+    padding-top: 5vw;
     }
 }
