@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
+    const slides = document.querySelectorAll(".slide");
     const indicators = document.querySelectorAll(".indicator");
     let currentIndex = 0;
 
     function updateCarousel() {
         const translateX = -currentIndex * 100;
         carousel.style.transform = `translateX(${translateX}%)`;
-        indicators.forEach((indicator, index) => {
-            indicator.classList.toggle("active", index === currentIndex);
+        slides.forEach((slide, index) => {
+            slide.classList.toggle("active", index === currentIndex);
         });
     }
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % 5;
+        currentIndex = (currentIndex + 1) % slides.length;
         updateCarousel();
     }
 

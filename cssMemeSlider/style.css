@@ -1,7 +1,4 @@
-/* Reset CSS */
-/* Добавьте сюда стили reset.css или normalize.css, если необходимо */
-
-/* Основные стили */
+/* Общие стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,8 +6,8 @@ body {
 }
 
 .carousel-container {
-    position: relative;
     overflow: hidden;
+    background-color: black;
 }
 
 .carousel {
@@ -24,35 +21,42 @@ body {
     text-align: center;
     background-color: black;
     color: white;
-    position: relative; /* Добавляем позиционирование */
-}
-
-img {
-    max-width: 100%;
+    position: relative;
+    width: 100%;
     height: auto;
 }
 
+img {
+    max-width: 40%;
+    height: 60%;
+    width: 100%;
+}
+
 .caption {
-    padding: 10px;
+    padding: 1vw;
+    font-size: 1.5vw;
+    margin-left: -35vw;
 }
 
 .indicators-container {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: flex-end;
+    padding-right: 29vw;
+    margin-top: -19vw;
 }
 
 .indicators {
     display: flex;
-    align-items: center; /* Выравниваем индикаторы по вертикали */
+    align-items: flex-end;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: blue;
+    width: 0.5vw; 
+    height: 0.5vw; 
+    background-color: black;
+    border: 2px solid rgb(152, 152, 255);
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0.5vw;
     cursor: pointer;
     opacity: 0.5;
     transition: opacity 0.2s ease-in-out;
@@ -60,19 +64,20 @@ img {
 
 .indicator:hover {
     opacity: 1;
+    background-color: rgb(152, 152, 255);
 }
-
 
 /* Мобильная версия */
 @media (max-width: 320px) {
-    .slide {
-        padding: 10px;
+    .indicators-container {
+        justify-content: center;
     }
-}
 
-/* Десктопная версия */
-@media (min-width: 1920px) {
-    .slide {
-        padding: 20px;
+    .indicators {
+        align-items: center;
+    }
+
+    .caption {
+        text-align: center;
     }
 }
